@@ -59,7 +59,7 @@
     shell: s3fs iphong /mnt/s3 -o url=http://s3.seo01.cloud-object-storage.appdomain.cloud -o passwd_file=${HOME}/.passwd-s3fs
 
   - name: server list download 
-    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/network%20sites/site1
+    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/network%20sites/APIC
 
   - name: mtr script download 
     shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/sample.sh

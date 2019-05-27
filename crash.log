@@ -1,0 +1,1836 @@
+2019/05/28 00:52:30 [INFO] Terraform version: 0.11.11  
+2019/05/28 00:52:30 [INFO] Go runtime version: go1.11.4
+2019/05/28 00:52:30 [INFO] CLI args: []string{"/usr/local/Cellar/terraform/0.11.11/bin/terraform", "plan"}
+2019/05/28 00:52:30 [DEBUG] Attempting to open CLI config file: /Users/inpyo/.terraformrc
+2019/05/28 00:52:30 Loading CLI configuration from /Users/inpyo/.terraformrc
+2019/05/28 00:52:30 [INFO] CLI command args: []string{"plan"}
+2019/05/28 00:52:30 [INFO] command: empty terraform config, returning nil
+2019/05/28 00:52:30 [DEBUG] command: no data state file found for backend config
+2019/05/28 00:52:30 [DEBUG] New state was assigned lineage "31d8b38b-bab7-5f70-a4b8-847a636ca8e0"
+2019/05/28 00:52:30 [INFO] command: backend initialized: <nil>
+2019/05/28 00:52:30 [DEBUG] checking for provider in "."
+2019/05/28 00:52:30 [DEBUG] checking for provider in "/usr/local/Cellar/terraform/0.11.11/bin"
+2019/05/28 00:52:30 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2019/05/28 00:52:30 [DEBUG] checking for provider in "/Users/inpyo/.terraform.d/plugins"
+2019/05/28 00:52:30 [DEBUG] found provider "terraform-provider-ibm_v0.14.1"
+2019/05/28 00:52:30 [DEBUG] found plugin override in .terraformrc: "ibm", "/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1"
+2019/05/28 00:52:30 [DEBUG] found valid plugin: "ibm", "0.0.0", "/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1"
+2019/05/28 00:52:30 [DEBUG] checking for provisioner in "."
+2019/05/28 00:52:30 [DEBUG] checking for provisioner in "/usr/local/Cellar/terraform/0.11.11/bin"
+2019/05/28 00:52:30 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2019/05/28 00:52:30 [DEBUG] checking for provisioner in "/Users/inpyo/.terraform.d/plugins"
+2019/05/28 00:52:30 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2019/05/28 00:52:30 [INFO] backend/local: starting Plan operation
+2019/05/28 00:52:30 [TRACE] Preserving existing state lineage "ff629c9f-3006-e6a4-b900-c95e77260437"
+2019/05/28 00:52:30 [TRACE] Preserving existing state lineage "ff629c9f-3006-e6a4-b900-c95e77260437"
+2019/05/28 00:52:30 [INFO] terraform: building graph: GraphTypeInput
+2019/05/28 00:52:30 [TRACE] ConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.LocalTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OutputTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"key_1", Type:"ibm_compute_ssh_key", RawCount:(*config.RawConfig)(0xc000450070), RawConfig:(*config.RawConfig)(0xc000450000), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"domain_vm", Type:"ibm_dns_domain", RawCount:(*config.RawConfig)(0xc000450150), RawConfig:(*config.RawConfig)(0xc0004500e0), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"vm_iccs", Type:"ibm_compute_vm_instance", RawCount:(*config.RawConfig)(0xc00030bb20), RawConfig:(*config.RawConfig)(0xc00030bab0), Provisioners:[]*config.Provisioner{(*config.Provisioner)(0xc0003e1890), (*config.Provisioner)(0xc0003e1950), (*config.Provisioner)(0xc0003e1a10), (*config.Provisioner)(0xc0003e1b00), (*config.Provisioner)(0xc0003e1b60)}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_compute_ssh_key.key_1": &terraform.ResourceState{Type:"ibm_compute_ssh_key", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420730), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_dns_domain.domain_vm": &terraform.ResourceState{Type:"ibm_dns_domain", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420780), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "ibm_compute_vm_instance.vm_iccs": &terraform.ResourceState{Type:"ibm_compute_vm_instance", Dependencies:[]string{"data.ibm_compute_ssh_key.key_1", "data.ibm_dns_domain.domain_vm"}, Primary:(*terraform.InstanceState)(0xc0004207d0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Attach provider request: []string{} ibm
+2019/05/28 00:52:30 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"ibm", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc00030b8f0)}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] resource ibm_compute_vm_instance.vm_iccs using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_compute_ssh_key.key_1 using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_dns_domain.domain_vm using provider provider.ibm
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "ibm_compute_vm_instance.vm_iccs" references: [data.ibm_compute_ssh_key.key_1 data.ibm_dns_domain.domain_vm]
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_bmx_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_username" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_compute_ssh_key.key_1" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.vm_count" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.lg_ips_us" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.ibm_bmx_api_key var.ibm_sl_username var.ibm_sl_api_key]
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_dns_domain.domain_vm" references: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeAbstractResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeAbstractResource
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] Starting graph walk: walkInput
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "root"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_compute_ssh_key.key_1" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provisioner.local-exec (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_dns_domain.domain_vm" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provisioner.remote-exec (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "ibm_compute_vm_instance.vm_iccs", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_dns_domain.domain_vm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provisioner.remote-exec (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_compute_ssh_key.key_1", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provisioner.local-exec (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_username': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.vm_count"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.vm_count': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_api_key': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_bmx_api_key': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.lg_ips_us': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provider.ibm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': evaluating
+2019/05/28 00:52:30 [TRACE] [walkInput] Entering eval tree: provider.ibm
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInitProvider
+2019-05-28T00:52:30.662+0900 [DEBUG] plugin: starting plugin: path=/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1 args=[/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1]
+2019-05-28T00:52:30.664+0900 [DEBUG] plugin: waiting for RPC address: path=/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1
+2019-05-28T00:52:30.674+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 2019/05/28 00:52:30 IBM Cloud Provider version 0.14.1
+2019-05-28T00:52:30.675+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: plugin address: timestamp=2019-05-28T00:52:30.675+0900 address=/var/folders/kh/nzktb_g547sc2_2k4str1sv40000gn/T/plugin276401895 network=unix
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInputProvider
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] [walkInput] Exiting eval tree: provider.ibm
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm (close)': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm (close)': evaluating
+2019/05/28 00:52:30 [TRACE] [walkInput] Entering eval tree: meta.count-boundary (count boundary fixup)
+2019/05/28 00:52:30 [TRACE] [walkInput] Entering eval tree: provider.ibm (close)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvider
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec (close)': walking
+2019/05/28 00:52:30 [TRACE] [walkInput] Exiting eval tree: provider.ibm (close)
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.ibm_dns_domain.domain_vm.0", replace "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "ibm_compute_vm_instance.vm_iccs.0", replace "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.ibm_compute_ssh_key.key_1.0", replace "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] [walkInput] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec (close)': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec (close)': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec (close)': evaluating
+2019/05/28 00:52:30 [TRACE] [walkInput] Entering eval tree: provisioner.remote-exec (close)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvisioner
+2019/05/28 00:52:30 [TRACE] [walkInput] Exiting eval tree: provisioner.remote-exec (close)
+2019/05/28 00:52:30 [TRACE] [walkInput] Entering eval tree: provisioner.local-exec (close)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvisioner
+2019/05/28 00:52:30 [TRACE] [walkInput] Exiting eval tree: provisioner.local-exec (close)
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "root"
+2019/05/28 00:52:30 [TRACE] vertex 'root.root': walking
+2019/05/28 00:52:30 [INFO] terraform: building graph: GraphTypeValidate
+2019/05/28 00:52:30 [TRACE] ConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.LocalTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OutputTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"vm_iccs", Type:"ibm_compute_vm_instance", RawCount:(*config.RawConfig)(0xc00030bb20), RawConfig:(*config.RawConfig)(0xc00030bab0), Provisioners:[]*config.Provisioner{(*config.Provisioner)(0xc0003e1890), (*config.Provisioner)(0xc0003e1950), (*config.Provisioner)(0xc0003e1a10), (*config.Provisioner)(0xc0003e1b00), (*config.Provisioner)(0xc0003e1b60)}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"key_1", Type:"ibm_compute_ssh_key", RawCount:(*config.RawConfig)(0xc000450070), RawConfig:(*config.RawConfig)(0xc000450000), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"domain_vm", Type:"ibm_dns_domain", RawCount:(*config.RawConfig)(0xc000450150), RawConfig:(*config.RawConfig)(0xc0004500e0), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_dns_domain.domain_vm": &terraform.ResourceState{Type:"ibm_dns_domain", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420780), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "ibm_compute_vm_instance.vm_iccs": &terraform.ResourceState{Type:"ibm_compute_vm_instance", Dependencies:[]string{"data.ibm_compute_ssh_key.key_1", "data.ibm_dns_domain.domain_vm"}, Primary:(*terraform.InstanceState)(0xc0004207d0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_compute_ssh_key.key_1": &terraform.ResourceState{Type:"ibm_compute_ssh_key", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420730), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Attach provider request: []string{} ibm
+2019/05/28 00:52:30 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"ibm", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc00030b8f0)}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_dns_domain.domain_vm using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_compute_ssh_key.key_1 using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource ibm_compute_vm_instance.vm_iccs using provider provider.ibm
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_dns_domain.domain_vm" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_username" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.vm_count" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.ibm_bmx_api_key var.ibm_sl_username var.ibm_sl_api_key]
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "provisioner.remote-exec" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_compute_ssh_key.key_1" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "ibm_compute_vm_instance.vm_iccs" references: [data.ibm_compute_ssh_key.key_1 data.ibm_dns_domain.domain_vm]
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_bmx_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.lg_ips_us" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "provisioner.local-exec" references: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.remote-exec - *terraform.NodeProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provisioner.remote-exec - *terraform.NodeProvisioner
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provisioner.remote-exec - *terraform.NodeProvisioner
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResource
+  provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.remote-exec - *terraform.NodeProvisioner
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provisioner.local-exec - *terraform.NodeProvisioner
+provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+provisioner.remote-exec - *terraform.NodeProvisioner
+provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  provisioner.local-exec (close) - *terraform.graphNodeCloseProvisioner
+  provisioner.remote-exec (close) - *terraform.graphNodeCloseProvisioner
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] Starting graph walk: walkValidate
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "root"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.local-exec"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_compute_ssh_key.key_1" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provisioner.remote-exec (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provisioner.local-exec (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "provisioner.remote-exec"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_dns_domain.domain_vm" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "provisioner.local-exec"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "ibm_compute_vm_instance.vm_iccs", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provisioner.local-exec (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_compute_ssh_key.key_1", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provisioner.remote-exec (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_dns_domain.domain_vm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_username': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.vm_count"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_api_key': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.remote-exec"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.lg_ips_us': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_bmx_api_key': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.local-exec"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.vm_count': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provisioner.remote-exec
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInitProvisioner
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provider.ibm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': walking
+2019-05-28T00:52:30.682+0900 [DEBUG] plugin: starting plugin: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform args="[/usr/local/Cellar/terraform/0.11.11/bin/terraform internal-plugin provisioner remote-exec]"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provider.ibm
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provisioner.local-exec
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInitProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInitProvisioner
+2019-05-28T00:52:30.683+0900 [DEBUG] plugin: waiting for RPC address: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvider
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provider.ibm
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': expanding/walking dynamic subgraph
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': expanding/walking dynamic subgraph
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_dns_domain.domain_vm": &terraform.ResourceState{Type:"ibm_dns_domain", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420780), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_compute_ssh_key.key_1": &terraform.ResourceState{Type:"ibm_compute_ssh_key", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000420730), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_dns_domain.domain_vm" references: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_compute_ssh_key.key_1" references: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: data.ibm_compute_ssh_key.key_1
+2019-05-28T00:52:30.696+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] Terraform version: 0.11.11
+2019-05-28T00:52:30.696+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] Go runtime version: go1.11.4
+2019-05-28T00:52:30.696+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] CLI args: []string{"/usr/local/Cellar/terraform/0.11.11/bin/terraform", "internal-plugin", "provisioner", "remote-exec"}
+2019-05-28T00:52:30.696+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [DEBUG] Attempting to open CLI config file: /Users/inpyo/.terraformrc
+2019-05-28T00:52:30.696+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 Loading CLI configuration from /Users/inpyo/.terraformrc
+2019-05-28T00:52:30.697+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] CLI command args: []string{"internal-plugin", "provisioner", "remote-exec"}
+2019-05-28T00:52:30.697+0900 [DEBUG] plugin.terraform: remote-exec-provisioner (internal) 2019/05/28 00:52:30 [INFO] Starting provisioner plugin remote-exec
+2019-05-28T00:52:30.698+0900 [DEBUG] plugin.terraform: plugin address: timestamp=2019-05-28T00:52:30.697+0900 address=/var/folders/kh/nzktb_g547sc2_2k4str1sv40000gn/T/plugin643014699 network=unix
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provisioner.remote-exec
+2019-05-28T00:52:30.699+0900 [DEBUG] plugin: starting plugin: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform args="[/usr/local/Cellar/terraform/0.11.11/bin/terraform internal-plugin provisioner local-exec]"
+2019-05-28T00:52:30.700+0900 [DEBUG] plugin: waiting for RPC address: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] Terraform version: 0.11.11
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] Go runtime version: go1.11.4
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] CLI args: []string{"/usr/local/Cellar/terraform/0.11.11/bin/terraform", "internal-plugin", "provisioner", "local-exec"}
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [DEBUG] Attempting to open CLI config file: /Users/inpyo/.terraformrc
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 Loading CLI configuration from /Users/inpyo/.terraformrc
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: 2019/05/28 00:52:30 [INFO] CLI command args: []string{"internal-plugin", "provisioner", "local-exec"}
+2019-05-28T00:52:30.713+0900 [DEBUG] plugin.terraform: local-exec-provisioner (internal) 2019/05/28 00:52:30 [INFO] Starting provisioner plugin local-exec
+2019-05-28T00:52:30.714+0900 [DEBUG] plugin.terraform: plugin address: timestamp=2019-05-28T00:52:30.714+0900 address=/var/folders/kh/nzktb_g547sc2_2k4str1sv40000gn/T/plugin543954312 network=unix
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provisioner.local-exec
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': expanding/walking dynamic subgraph
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "ibm_compute_vm_instance.vm_iccs": &terraform.ResourceState{Type:"ibm_compute_vm_instance", Dependencies:[]string{"data.ibm_compute_ssh_key.key_1", "data.ibm_dns_domain.domain_vm"}, Primary:(*terraform.InstanceState)(0xc0004207d0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "ibm_compute_vm_instance.vm_iccs" references: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeValidatableResourceInstance
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvisioner
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalValidateProvisioner
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.local-exec (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec (close)': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provisioner.remote-exec (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec (close)': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.local-exec (close)': evaluating
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm (close)': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (count boundary fixup)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.ibm_dns_domain.domain_vm.0", replace "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provisioner.local-exec (close)
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "ibm_compute_vm_instance.vm_iccs.0", replace "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "data.ibm_compute_ssh_key.key_1.0", replace "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvisioner
+2019/05/28 00:52:30 [TRACE] vertex 'root.provisioner.remote-exec (close)': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provisioner.remote-exec (close)
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provisioner.local-exec (close)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvisioner
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm (close)': evaluating
+2019/05/28 00:52:30 [TRACE] [walkValidate] Entering eval tree: provider.ibm (close)
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provisioner.remote-exec (close)
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalCloseProvider
+2019/05/28 00:52:30 [TRACE] [walkValidate] Exiting eval tree: provider.ibm (close)
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "root"
+2019/05/28 00:52:30 [TRACE] vertex 'root.root': walking
+2019/05/28 00:52:30 [INFO] backend/local: plan calling Refresh
+2019/05/28 00:52:30 [INFO] terraform: building graph: GraphTypeRefresh
+2019/05/28 00:52:30 [TRACE] ConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+2019/05/28 00:52:30 [TRACE] ConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_compute_ssh_key.key_1": &terraform.ResourceState{Type:"ibm_compute_ssh_key", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000c2f00), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "data.ibm_dns_domain.domain_vm": &terraform.ResourceState{Type:"ibm_dns_domain", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000c2f50), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [DEBUG] Attaching resource state to "ibm_compute_vm_instance.vm_iccs": &terraform.ResourceState{Type:"ibm_compute_vm_instance", Dependencies:[]string{"data.ibm_compute_ssh_key.key_1", "data.ibm_dns_domain.domain_vm"}, Primary:(*terraform.InstanceState)(0xc0000c2fa0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"vm_iccs", Type:"ibm_compute_vm_instance", RawCount:(*config.RawConfig)(0xc00030bb20), RawConfig:(*config.RawConfig)(0xc00030bab0), Provisioners:[]*config.Provisioner{(*config.Provisioner)(0xc0003e1890), (*config.Provisioner)(0xc0003e1950), (*config.Provisioner)(0xc0003e1a10), (*config.Provisioner)(0xc0003e1b00), (*config.Provisioner)(0xc0003e1b60)}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"key_1", Type:"ibm_compute_ssh_key", RawCount:(*config.RawConfig)(0xc000450070), RawConfig:(*config.RawConfig)(0xc000450000), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] AttachResourceConfigTransformer: Attach resource config request: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:30 [TRACE] Attaching resource config: &config.Resource{Mode:1, Name:"domain_vm", Type:"ibm_dns_domain", RawCount:(*config.RawConfig)(0xc000450150), RawConfig:(*config.RawConfig)(0xc0004500e0), Provisioners:[]*config.Provisioner{}, Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/05/28 00:52:30 [TRACE] Attach provider request: []string{} ibm
+2019/05/28 00:52:30 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"ibm", Alias:"", Version:"", RawConfig:(*config.RawConfig)(0xc00030b8f0)}
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_dns_domain.domain_vm using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource ibm_compute_vm_instance.vm_iccs using provider provider.ibm
+2019/05/28 00:52:30 [DEBUG] resource data.ibm_compute_ssh_key.key_1 using provider provider.ibm
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.LocalTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.OutputTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_bmx_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_username" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.vm_count" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_dns_domain.domain_vm" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "data.ibm_compute_ssh_key.key_1" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.ibm_sl_api_key" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "var.lg_ips_us" references: []
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.ibm_bmx_api_key var.ibm_sl_username var.ibm_sl_api_key]
+2019/05/28 00:52:30 [DEBUG] ReferenceTransformer: "ibm_compute_vm_instance.vm_iccs" references: [data.ibm_compute_ssh_key.key_1 data.ibm_dns_domain.domain_vm]
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  provider.ibm - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+  data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResource
+  data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResource
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ibm_bmx_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_api_key - *terraform.NodeRootVariable
+  var.ibm_sl_username - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResource
+root - terraform.graphNodeRoot
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+  var.lg_ips_us - *terraform.NodeRootVariable
+  var.vm_count - *terraform.NodeRootVariable
+var.ibm_bmx_api_key - *terraform.NodeRootVariable
+var.ibm_sl_api_key - *terraform.NodeRootVariable
+var.ibm_sl_username - *terraform.NodeRootVariable
+var.lg_ips_us - *terraform.NodeRootVariable
+var.vm_count - *terraform.NodeRootVariable
+2019/05/28 00:52:30 [DEBUG] Starting graph walk: walkRefresh
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "root"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added new vertex: "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_dns_domain.domain_vm" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "data.ibm_compute_ssh_key.key_1" waiting on "provider.ibm"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "root" waiting on "provider.ibm (close)"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "provider.ibm" waiting on "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] dag/walk: added edge: "ibm_compute_vm_instance.vm_iccs" waiting on "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_dns_domain.domain_vm", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "data.ibm_compute_ssh_key.key_1", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "ibm_compute_vm_instance.vm_iccs", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: dependencies changed for "provider.ibm (close)", sending new deps
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_username"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_username': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_sl_api_key"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.vm_count"
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.lg_ips_us"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.vm_count': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.lg_ips_us': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_sl_api_key': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "var.ibm_bmx_api_key"
+2019/05/28 00:52:30 [TRACE] vertex 'root.var.ibm_bmx_api_key': walking
+2019/05/28 00:52:30 [TRACE] dag/walk: walking "provider.ibm"
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': walking
+2019/05/28 00:52:30 [TRACE] vertex 'root.provider.ibm': evaluating
+2019/05/28 00:52:30 [TRACE] [walkRefresh] Entering eval tree: provider.ibm
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInitProvider
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:30 [TRACE] root: eval: *terraform.EvalConfigProvider
+2019-05-28T00:52:30.725+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 2019/05/28 00:52:30 Configuring SoftLayer Session
+2019-05-28T00:52:30.725+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 2019/05/28 00:52:30 Configuring Bluemix Session
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Exiting eval tree: provider.ibm
+2019/05/28 00:52:34 [TRACE] dag/walk: walking "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': walking
+2019/05/28 00:52:34 [TRACE] dag/walk: walking "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': walking
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': evaluating
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': evaluating
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Entering eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Entering eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': expanding/walking dynamic subgraph
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': expanding/walking dynamic subgraph
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] OrphanResourceCount: Starting...
+2019/05/28 00:52:34 [TRACE] OrphanResourceCount: Checking: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] OrphanResourceCount: Starting...
+2019/05/28 00:52:34 [TRACE] OrphanResourceCount: Checking: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [DEBUG] Attaching resource state to "data.ibm_dns_domain.domain_vm": &terraform.ResourceState{Type:"ibm_dns_domain", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000c2f50), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [DEBUG] Attaching resource state to "data.ibm_compute_ssh_key.key_1": &terraform.ResourceState{Type:"ibm_compute_ssh_key", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000c2f00), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:34 [DEBUG] ReferenceTransformer: "data.ibm_dns_domain.domain_vm" references: []
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_dns_domain.domain_vm - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [DEBUG] ReferenceTransformer: "data.ibm_compute_ssh_key.key_1" references: []
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] dag/walk: added new vertex: "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:34 [TRACE] Graph after step *terraform.RootTransformer:
+
+data.ibm_compute_ssh_key.key_1 - *terraform.NodeRefreshableDataResourceInstance
+2019/05/28 00:52:34 [TRACE] dag/walk: added new vertex: "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:34 [TRACE] dag/walk: walking "data.ibm_dns_domain.domain_vm"
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': walking
+2019/05/28 00:52:34 [TRACE] dag/walk: walking "data.ibm_compute_ssh_key.key_1"
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': walking
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_compute_ssh_key.key_1': evaluating
+2019/05/28 00:52:34 [TRACE] vertex 'root.data.ibm_dns_domain.domain_vm': evaluating
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Entering eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:34 [TRACE] [walkRefresh] Entering eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalWriteState
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalWriteState
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:34 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalReadDataDiff
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:34 [TRACE] root: eval: terraform.EvalNoop
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalReadDataDiff
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalReadDataApply
+2019/05/28 00:52:34 [TRACE] root: eval: *terraform.EvalReadDataApply
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalWriteState
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalUpdateStateHook
+2019/05/28 00:52:35 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_dns_domain.domain_vm
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalWriteState
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalUpdateStateHook
+2019/05/28 00:52:35 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_compute_ssh_key.key_1
+2019/05/28 00:52:35 [TRACE] dag/walk: walking "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:35 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': walking
+2019/05/28 00:52:35 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': evaluating
+2019/05/28 00:52:35 [TRACE] [walkRefresh] Entering eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalIf
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/05/28 00:52:35 [TRACE] [walkRefresh] Exiting eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:35 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': expanding/walking dynamic subgraph
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [TRACE] OrphanResourceCount: Starting...
+2019/05/28 00:52:35 [TRACE] OrphanResourceCount: Checking: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [DEBUG] Attaching resource state to "ibm_compute_vm_instance.vm_iccs": &terraform.ResourceState{Type:"ibm_compute_vm_instance", Dependencies:[]string{"data.ibm_compute_ssh_key.key_1", "data.ibm_dns_domain.domain_vm"}, Primary:(*terraform.InstanceState)(0xc0000c2fa0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [DEBUG] ReferenceTransformer: "ibm_compute_vm_instance.vm_iccs" references: []
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [TRACE] Graph after step *terraform.RootTransformer:
+
+ibm_compute_vm_instance.vm_iccs - *terraform.NodeRefreshableManagedResourceInstance
+2019/05/28 00:52:35 [TRACE] dag/walk: added new vertex: "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:35 [TRACE] dag/walk: walking "ibm_compute_vm_instance.vm_iccs"
+2019/05/28 00:52:35 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': walking
+2019/05/28 00:52:35 [TRACE] vertex 'root.ibm_compute_vm_instance.vm_iccs': evaluating
+2019/05/28 00:52:35 [TRACE] [walkRefresh] Entering eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalSequence
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalReadState
+2019/05/28 00:52:35 [TRACE] root: eval: *terraform.EvalRefresh
+2019/05/28 00:52:35 [TRACE] dag/walk: vertex "root", waiting for: "provider.ibm (close)"
+2019/05/28 00:52:35 [TRACE] dag/walk: vertex "provider.ibm (close)", waiting for: "ibm_compute_vm_instance.vm_iccs"
+2019-05-28T00:52:39.162+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: panic: runtime error: invalid memory address or nil pointer dereference
+2019-05-28T00:52:39.162+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: [signal SIGSEGV: segmentation violation code=0x1 addr=0x3f0 pc=0x19ed997]
+2019-05-28T00:52:39.162+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 
+2019-05-28T00:52:39.162+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: goroutine 151 [running]:
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: github.com/IBM-Cloud/terraform-provider-ibm/ibm.resourceIBMComputeVmInstanceRead(0xc4202868c0, 0x1f0eba0, 0xc42052c680, 0xc4202868c0, 0x0)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/Users/hkantare/go/src/github.com/IBM-Cloud/terraform-provider-ibm/ibm/resource_ibm_compute_vm_instance.go:1078 +0x877
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/helper/schema.(*Resource).Refresh(0xc4202be850, 0xc42061a140, 0x1f0eba0, 0xc42052c680, 0xc4204b5258, 0x10b5301, 0x1c85ca0)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/Users/hkantare/go/src/github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/helper/schema/resource.go:354 +0x167
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/helper/schema.(*Provider).Refresh(0xc420342930, 0xc42061a0f0, 0xc42061a140, 0x18, 0x18, 0xc4207c8840)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/Users/hkantare/go/src/github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/helper/schema/provider.go:308 +0x9a
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Refresh(0xc42000b380, 0xc4202f0490, 0xc4202f07d0, 0x0, 0x0)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/Users/hkantare/go/src/github.com/IBM-Cloud/terraform-provider-ibm/vendor/github.com/hashicorp/terraform/plugin/resource_provider.go:549 +0x4e
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: reflect.Value.call(0xc42013b980, 0xc42056e2d8, 0x13, 0x1f31646, 0x4, 0xc4203cbf18, 0x3, 0x3, 0xc420972080, 0x0, ...)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/usr/local/go/src/reflect/value.go:447 +0x969
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: reflect.Value.Call(0xc42013b980, 0xc42056e2d8, 0x13, 0xc4209acf18, 0x3, 0x3, 0xc4201eeb40, 0xc420627020, 0x0)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/usr/local/go/src/reflect/value.go:308 +0xa4
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: net/rpc.(*service).call(0xc4203ec640, 0xc4200c2280, 0xc4201de500, 0xc4201de510, 0xc42016a500, 0xc4201fca80, 0x1c85c60, 0xc4202f0490, 0x16, 0x1c85ca0, ...)
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/usr/local/go/src/net/rpc/server.go:384 +0x14e
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: created by net/rpc.(*Server).ServeCodec
+2019-05-28T00:52:39.163+0900 [DEBUG] plugin.terraform-provider-ibm_v0.14.1: 	/usr/local/go/src/net/rpc/server.go:480 +0x43a
+2019/05/28 00:52:39 [ERROR] root: eval: *terraform.EvalRefresh, err: ibm_compute_vm_instance.vm_iccs: unexpected EOF
+2019/05/28 00:52:39 [ERROR] root: eval: *terraform.EvalSequence, err: ibm_compute_vm_instance.vm_iccs: unexpected EOF
+2019/05/28 00:52:39 [TRACE] [walkRefresh] Exiting eval tree: ibm_compute_vm_instance.vm_iccs
+2019/05/28 00:52:39 [TRACE] dag/walk: upstream errored, not walking "provider.ibm (close)"
+2019/05/28 00:52:39 [TRACE] dag/walk: upstream errored, not walking "root"
+2019/05/28 00:52:39 [DEBUG] plugin: waiting for all plugin processes to complete...
+2019-05-28T00:52:39.166+0900 [WARN ] plugin: error closing client during Kill: err="connection is shut down"
+2019-05-28T00:52:39.166+0900 [DEBUG] plugin: plugin process exited: path=/Users/inpyo/.terraform.d/plugins/terraform-provider-ibm_v0.14.1
+2019-05-28T00:52:39.166+0900 [DEBUG] plugin.terraform: remote-exec-provisioner (internal) 2019/05/28 00:52:39 [ERR] plugin: plugin server: accept unix /var/folders/kh/nzktb_g547sc2_2k4str1sv40000gn/T/plugin643014699: use of closed network connection
+2019-05-28T00:52:39.166+0900 [DEBUG] plugin.terraform: local-exec-provisioner (internal) 2019/05/28 00:52:39 [ERR] plugin: plugin server: accept unix /var/folders/kh/nzktb_g547sc2_2k4str1sv40000gn/T/plugin543954312: use of closed network connection
+2019-05-28T00:52:39.166+0900 [DEBUG] plugin.terraform: local-exec-provisioner (internal) 2019/05/28 00:52:39 [DEBUG] plugin: waiting for all plugin processes to complete...
+2019-05-28T00:52:39.166+0900 [DEBUG] plugin.terraform: remote-exec-provisioner (internal) 2019/05/28 00:52:39 [DEBUG] plugin: waiting for all plugin processes to complete...
+2019-05-28T00:52:39.168+0900 [DEBUG] plugin: plugin process exited: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform
+2019-05-28T00:52:39.168+0900 [DEBUG] plugin: plugin process exited: path=/usr/local/Cellar/terraform/0.11.11/bin/terraform
