@@ -56,13 +56,13 @@
     shell: chmod 600 ${HOME}/.passwd-s3fs
 
   - name: Credential into file
-    shell: s3fs iphong /mnt/s3 -o url=http{s}://s3.seo01.cloud-object-storage.appdomain.cloud -o passwd_file=${HOME}/.passwd-s3fs
+    shell: s3fs iphong /mnt/s3 -o url=http://s3.seo01.cloud-object-storage.appdomain.cloud -o passwd_file=${HOME}/.passwd-s3fs
 
   - name: server list download 
-    shell: wget https://raw.githubusercontent.com/Kylekr/lg-sample/master/1.txt
+    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/network%20sites/site1
 
   - name: mtr script download 
-    shell: wget https://raw.githubusercontent.com/Kylekr/lg-sample/master/sample.sh
+    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/sample.sh
 
   - name: execute mtr script
     shell: sh sample.sh

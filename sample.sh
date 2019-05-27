@@ -1,7 +1,7 @@
 #!/bin/bash
 # Program name: sample.sh
-date
 while read IP
 do
-    mtr "${IP}" -r -c 10 --csv > /mnt/s3/result.csv
-done < /root/sample.sh
+    echo "\n${IP}" >> /mnt/s3/result.csv
+    mtr "${IP}" -w -r -b -c 100 | tail -2 >> /mnt/s3/result.csv
+done < /root/site1
