@@ -62,7 +62,7 @@ resource "ibm_compute_vm_instance" "sjc04" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.sjc04.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -122,7 +122,7 @@ resource "ibm_compute_vm_instance" "wdc07" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.wdc07.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -182,7 +182,7 @@ resource "ibm_compute_vm_instance" "mon01" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.mon01.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -242,7 +242,7 @@ resource "ibm_compute_vm_instance" "sao01" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.sao01.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -302,7 +302,7 @@ resource "ibm_compute_vm_instance" "lon06" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.lon06.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -362,7 +362,7 @@ resource "ibm_compute_vm_instance" "fra05" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.fra05.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -423,7 +423,7 @@ resource "ibm_compute_vm_instance" "syd05" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.syd05.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -483,7 +483,7 @@ resource "ibm_compute_vm_instance" "che01" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.che01.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -543,7 +543,7 @@ resource "ibm_compute_vm_instance" "sng01" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.sng01.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
@@ -603,7 +603,7 @@ resource "ibm_compute_vm_instance" "seo01" {
   provisioner "local-exec" {
     command = <<EOF
       echo "[demo]" > inventory
-      echo "${ibm_compute_vm_instance.vm_iccs.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
+      echo "${ibm_compute_vm_instance.seo01.ipv4_address} ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa" >> inventory
       EOF
   }
 
