@@ -62,10 +62,10 @@
     shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/network%20sites/APIC
 
   - name: mtr script download 
-    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/sample.sh
+    shell: wget https://raw.githubusercontent.com/honginpyo1/lgepoc/master/sample_APIC.sh
 
   - name: execute mtr script
-    shell: sh sample.sh
+    shell: sh sample_APIC.sh
 
 
 
