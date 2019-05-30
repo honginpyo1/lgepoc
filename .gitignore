@@ -30,4 +30,11 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+# Playbook
+playbook_AIC.yaml
+playbook_APIC.yaml
+playbook_EIC.yaml
+
 # End of https://www.gitignore.io/api/terraform
+
+
