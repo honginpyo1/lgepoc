@@ -1,5 +1,5 @@
 .credentials.tf
-.network sites/
+.networksites/
 
 # Local .terraform directories
 **/.terraform/*
